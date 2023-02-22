@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <img src="assets/Vector.png" alt="" />
-      <h1>Encriptador de texto</h1>
-    </header>
-    <main>
-      <div class="text-box">
-        <textarea name="text-input" id="text-input" cols="30" rows="10" placeholder="Ingrese su texto aquí..."></textarea>
-        <div class="button-sec">
-          <p class="recomendation"></p>
-          <button class="encriptar" onclick="encrypt()">Encriptar</button>
-          <button class="desencriptar" onclick="decrypt()">Desencriptar</button>
-        </div>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <img src="assets/Vector.png" alt="" />
+            <h1>Encriptador de texto</h1>
+        </header>
+        <main>
+            <section>
+                <div class="text-box">
+                    <textarea
+                        name="text-input"
+                        id="text-input"
+                        cols="30"
+                        rows="10"
+                        placeholder="Ingrese su texto aquí..."
+                    ></textarea>
+                    <div>
+                        <h6>Solo letras minusculas y sin acentos</h6>
+                    </div>
+                    <div class="button-sec">
+                        <p class="recomendation"></p>
+                        <button class="encriptar" onclick="encrypt()">
+                            Encriptar
+                        </button>
+                        <button class="desencriptar" onclick="decrypt()">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="encrypted-box">
+                    <textarea
+                        name="text-output"
+                        id="text-output"
+                        cols="30"
+                        rows="10"
+                        placeholder="Ingrese su texto aquí..."
+                    ></textarea>
+                    <div>
+                        <button class="copiar" onclick="copytext()">
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
 
-      <div class="encrypted-box">
-        <textarea name="text-output" id="text-output" cols="30" rows="10" placeholder="Ingrese su texto aquí..."></textarea>
-        <button class="copiar" onclick="copytext()">Copiar</button>
-      </div>
-    </main>
-    <footer></footer>
-
-    <script src="main.js"></script>
-  </body>
+        <script src="main.js"></script>
+    </body>
 </html>
